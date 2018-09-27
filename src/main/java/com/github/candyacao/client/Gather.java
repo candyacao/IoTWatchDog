@@ -1,4 +1,5 @@
-package com.github.candyacao.server;
+package com.github.candyacao.client;
+
 
 import com.github.candyacao.bean.Environment;
 
@@ -9,6 +10,6 @@ import java.util.Collection;
  * @创建时间 2018/9/25
  * @描述
  */
-public interface DBStore {
-    void saveToDB(Collection<Environment> collection);
+public interface Gather {
+    Collection<Environment> gather();
 }
