@@ -5,7 +5,7 @@
 		<port>11111</port>
 	</client>
 	<gather class="com.github.candyacao.client.GatherImpl">
-		<file>src\main\resources\radwtmp</file>
+		<file>src/main/resources/radwtmp</file>
 	</gather>
 	<server class="com.github.candyacao.server.ServerImpl">
 		<port>11111</port>
@@ -14,6 +14,6 @@
 		<batchSize>1000</batchSize>
 	</dbStore>
 	<logger class="com.github.candyacao.logger.LogImpl">
-		<log_prop>src\main\resources\log4j.properties</log_prop>
+		<log_prop>src/main/resources/log4j.properties</log_prop>
 	</logger>
 </module>

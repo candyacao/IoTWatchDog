@@ -25,7 +25,7 @@ public class ConfigurationImpl implements Configuration {
 	static {
 		SAXReader reader = new SAXReader();
 		try {
-			Document document = reader.read("src\\main\\resources\\config.xml");
+			Document document = reader.read("src/main/resources/config.xml");
 			//获取根元素
 			Element root = document.getRootElement();
 			List<Element> elements = root.elements();
