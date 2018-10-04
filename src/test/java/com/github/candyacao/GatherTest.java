@@ -39,6 +39,6 @@ public class GatherTest {
 		Collection<Environment> collection = server.receiver();
 		DBStore dbStore = configuration.getDBStore();
 		dbStore.saveToDB(collection);
-		
+
 	}
 }

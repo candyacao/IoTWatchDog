@@ -1,0 +1,11 @@
+version: '2'
+services:
+    oracle:
+        image: dkfi/docker-oracle-xe-10g
+        environment:
+          - ORACLE_ALLOW_REMOTE=true
+#        volumes:
+#          - ./dbinit:/docker-entrypoint-initdb.d
+        ports:
+            - 49161:1521
+            - 49162:8080
