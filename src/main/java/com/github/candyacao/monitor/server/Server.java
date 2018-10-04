@@ -14,7 +14,7 @@ import java.util.Collection;
  */
 public interface Server {
 
-    void listenAndServe() ;
+    void listenAndServe();
     void serve(ServerSocket socket) throws IOException, ClassNotFoundException;
 
 }

@@ -17,7 +17,7 @@ import java.util.Properties;
 
 
 public class ServerImpl implements Server, ModuleInit {
-	private int port=11111;
+	private int port;
 	private static Log log = new LogImpl();
 
 	private static Handler DefaultHandler;
@@ -43,6 +43,7 @@ public class ServerImpl implements Server, ModuleInit {
 		outs= s.getOutputStream();
 		DefaultHandler.handler(ins, outs);
 		s.close();
+		log.info("client leaved.");
 	}
 
 	public void listenAndServe(){
@@ -67,10 +68,7 @@ public class ServerImpl implements Server, ModuleInit {
 		}
 	}
 
-
-
-	public static void main(String[] args) {
-		new ConfigurationImpl();
+	public static void main(String[] args){
 
 		class H implements Handler{
 			public void handler(InputStream ins, OutputStream outs) throws IOException, ClassNotFoundException{
@@ -86,7 +84,7 @@ public class ServerImpl implements Server, ModuleInit {
 			}
 		}
 
-		Server server = new ServerImpl();
+		Server server = new ConfigurationImpl().getServer();
 		((ServerImpl) server).setHandler(new H());
 		server.listenAndServe();
 	}
