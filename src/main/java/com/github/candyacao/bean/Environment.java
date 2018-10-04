@@ -144,7 +144,4 @@ public class Environment implements Serializable {
 				+ ", sersorAddress=" + sersorAddress + ", count=" + count + ", cmd=" + cmd + ", data=" + data
 				+ ", status=" + status + ", gather_time=" + gather_time + "]";
 	}
-	
-    
-	
 }
