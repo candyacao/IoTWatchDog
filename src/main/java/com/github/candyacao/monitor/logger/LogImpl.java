@@ -1,9 +1,9 @@
-package com.github.candyacao.logger;
+package com.github.candyacao.monitor.logger;
 
 import java.util.Properties;
 
+import com.github.candyacao.monitor.config.ModuleInit;
 import org.apache.log4j.Logger;
-import com.github.candyacao.config.ModuleInit;
 import org.apache.log4j.PropertyConfigurator;
 
 public class LogImpl implements Log, ModuleInit {

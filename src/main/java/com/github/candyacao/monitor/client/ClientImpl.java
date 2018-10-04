@@ -1,9 +1,11 @@
-package com.github.candyacao.client;
+package com.github.candyacao.monitor.client;
 
-import com.github.candyacao.bean.Environment;
-import com.github.candyacao.config.ModuleInit;
-import com.github.candyacao.logger.Log;
-import com.github.candyacao.logger.LogImpl;
+import com.github.candyacao.monitor.bean.Environment;
+import com.github.candyacao.monitor.config.Configuration;
+import com.github.candyacao.monitor.config.ConfigurationImpl;
+import com.github.candyacao.monitor.config.ModuleInit;
+import com.github.candyacao.monitor.logger.Log;
+import com.github.candyacao.monitor.logger.LogImpl;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -57,5 +59,13 @@ public class ClientImpl implements Client, ModuleInit {
     public void init(Properties properties) {
         ip = properties.getProperty("ip");
         port = Integer.parseInt(properties.getProperty("port"));
+    }
+
+    public static void main(String[] args) {
+        Configuration configuration = new ConfigurationImpl();
+        Gather gather = configuration.getGather();
+        Collection<Environment> collection = gather.gather();
+        Client client = configuration.getClient();
+        client.send(collection);
     }
 }

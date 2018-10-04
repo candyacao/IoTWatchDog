@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
-	<client class="com.github.candyacao.client.ClientImpl">
+	<client class="com.github.candyacao.monitor.client.ClientImpl">
 		<ip>127.0.0.1</ip>
 		<port>11111</port>
 	</client>
-	<gather class="com.github.candyacao.client.GatherImpl">
+	<gather class="com.github.candyacao.monitor.client.GatherImpl">
 		<file>src/main/resources/radwtmp</file>
 	</gather>
-	<server class="com.github.candyacao.server.ServerImpl">
+	<server class="com.github.candyacao.monitor.server.ServerImpl">
 		<port>11111</port>
 	</server>
-	<dbStore class="com.github.candyacao.server.DBStoreImp">
+	<dbStore class="com.github.candyacao.monitor.server.DBStoreImp">
 		<batchSize>1000</batchSize>
 	</dbStore>
-	<logger class="com.github.candyacao.logger.LogImpl">
+	<logger class="com.github.candyacao.monitor.logger.LogImpl">
 		<log_prop>src/main/resources/log4j.properties</log_prop>
 	</logger>
 </module>

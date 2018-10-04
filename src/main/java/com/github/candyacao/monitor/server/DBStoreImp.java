@@ -1,11 +1,11 @@
-package com.github.candyacao.server;
+package com.github.candyacao.monitor.server;
 
 
-import com.github.candyacao.bean.Environment;
-import com.github.candyacao.config.ModuleInit;
-import com.github.candyacao.logger.Log;
-import com.github.candyacao.logger.LogImpl;
-import com.github.candyacao.util.DBUtil;
+import com.github.candyacao.monitor.bean.Environment;
+import com.github.candyacao.monitor.config.ModuleInit;
+import com.github.candyacao.monitor.logger.Log;
+import com.github.candyacao.monitor.logger.LogImpl;
+import com.github.candyacao.monitor.util.DBUtil;
 
 
 import java.sql.Connection;
@@ -32,7 +32,7 @@ public class DBStoreImp implements DBStore, ModuleInit {
     /**
      * 入库
      *
-     * @param envs 集合对象
+     * @param collection 集合对象
      */
     @Override
     public void saveToDB(Collection<Environment> collection) {

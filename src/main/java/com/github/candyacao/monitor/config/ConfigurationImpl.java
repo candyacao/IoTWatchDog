@@ -1,15 +1,15 @@
-package com.github.candyacao.config;
+package com.github.candyacao.monitor.config;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import com.github.candyacao.client.Client;
-import com.github.candyacao.client.Gather;
-import com.github.candyacao.logger.Log;
-import com.github.candyacao.server.DBStore;
-import com.github.candyacao.server.Server;
+import com.github.candyacao.monitor.client.Client;
+import com.github.candyacao.monitor.client.Gather;
+import com.github.candyacao.monitor.logger.Log;
+import com.github.candyacao.monitor.server.DBStore;
+import com.github.candyacao.monitor.server.Server;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;

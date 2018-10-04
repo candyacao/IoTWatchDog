@@ -1,10 +1,10 @@
-package com.github.candyacao.client;
+package com.github.candyacao.monitor.client;
 
 
-import com.github.candyacao.bean.Environment;
-import com.github.candyacao.config.ModuleInit;
-import com.github.candyacao.logger.Log;
-import com.github.candyacao.logger.LogImpl;
+import com.github.candyacao.monitor.bean.Environment;
+import com.github.candyacao.monitor.config.ModuleInit;
+import com.github.candyacao.monitor.logger.Log;
+import com.github.candyacao.monitor.logger.LogImpl;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.github.candyacao.bean;
+package com.github.candyacao.monitor.bean;
 
 
 import java.io.Serializable;

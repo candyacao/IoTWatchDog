@@ -1,7 +1,7 @@
-package com.github.candyacao.client;
+package com.github.candyacao.monitor.client;
 
 
-import com.github.candyacao.bean.Environment;
+import com.github.candyacao.monitor.bean.Environment;
 
 import java.util.Collection;
 

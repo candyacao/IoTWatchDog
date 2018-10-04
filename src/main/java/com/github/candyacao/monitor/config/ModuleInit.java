@@ -1,4 +1,4 @@
-package com.github.candyacao.config;
+package com.github.candyacao.monitor.config;
 
 import java.util.Properties;
 
