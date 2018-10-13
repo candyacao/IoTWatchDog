@@ -51,9 +51,7 @@ public class GatherImpl implements Gather, ModuleInit {
 		RandomAccessFile rsf = null;
 		String line = null;
 		try {
-			log.debug("rsf发生空指针异常");
 			rsf = new RandomAccessFile(filePath, "r");
-			System.out.println(rsf);
 			while ((line = rsf.readLine()) != null) {
 				// 处理每行记录，封装成一个Environment对象并且放入集合中
 				lineToEnvironment(line);
