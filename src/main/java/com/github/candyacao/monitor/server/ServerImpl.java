@@ -33,17 +33,10 @@ public class ServerImpl implements Server, ModuleInit {
 
 	@Override
 	public void serve(ServerSocket socket) throws IOException, ClassNotFoundException {
-		InputStream ins = null;
-		OutputStream outs = null;
-		Collection<Environment> collection = null;
+
 		Socket s = socket.accept();
 		log.info("客户端连接成功。。。。");
-		// 服务器端接收每个客户端的数据
-		ins = s.getInputStream();
-		outs= s.getOutputStream();
-		DefaultHandler.handler(ins, outs);
-		s.close();
-		log.info("client leaved.");
+		new Thread(new ThreadImpl(s,DefaultHandler)).start();
 	}
 
 	public void listenAndServe(){
